@@ -444,3 +444,31 @@ in SYSTEMPATH\Database\BaseConnection.php on line 465.
  6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
  7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 05:31:56 --> ErrorException: Undefined variable $mhs
+[Method: GET, Route: mahasiswa]
+in APPPATH\Views\mahasiswa_index.php on line 18.
+ 1 APPPATH\Views\mahasiswa_index.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mhs', 'C:\\xampp\\htdocs\\Proyek3-Mission2-Build-Simple-Website\\CodeIgniter\\app\\Views\\mahasiswa_index.php', 18)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Proyek3-Mission2-Build-Simple-Website\\CodeIgniter\\app\\Views\\mahasiswa_index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswa_index', [], true)
+ 5 APPPATH\Controllers\MahasiswaPage.php(14): view('mahasiswa_index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaPage->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaPage))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-08-31 05:31:58 --> ErrorException: Undefined variable $mhs
+[Method: GET, Route: mahasiswa]
+in APPPATH\Views\mahasiswa_index.php on line 18.
+ 1 APPPATH\Views\mahasiswa_index.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $mhs', 'C:\\xampp\\htdocs\\Proyek3-Mission2-Build-Simple-Website\\CodeIgniter\\app\\Views\\mahasiswa_index.php', 18)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Proyek3-Mission2-Build-Simple-Website\\CodeIgniter\\app\\Views\\mahasiswa_index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswa_index', [], true)
+ 5 APPPATH\Controllers\MahasiswaPage.php(14): view('mahasiswa_index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MahasiswaPage->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MahasiswaPage))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
