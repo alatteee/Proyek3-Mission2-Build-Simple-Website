@@ -1,0 +1,446 @@
+ERROR - 2025-08-31 04:32:04 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-31 04:32:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mahasiswa`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 04:35:12 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-31 04:35:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mahasiswa`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 04:35:13 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-31 04:35:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mahasiswa`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 04:35:14 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-31 04:35:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mahasiswa`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 04:35:14 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-31 04:35:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mahasiswa`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Mahasiswa_model.php(16): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 04:42:31 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-31 04:42:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mahasiswa`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Mahasiswa_model.php(13): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 04:43:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-31 04:43:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mahasiswa`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Mahasiswa_model.php(13): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 04:43:55 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(13): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Models\Mahasiswa_model.php(13): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-08-31 04:43:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `mahasiswa`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\Mahasiswa_model.php(13): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Mahasiswa.php(14): App\Models\Mahasiswa_model->getMahasiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-08-31 04:46:34 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(15): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\app\Controllers\Mahasiswa.php(15): CodeIgniter\Database\BaseConnection->query('SELECT * FROM m...')
+#3 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+#4 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+#5 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#8 C:\xampp\htdocs\Proyek3-Mission2-Build-Simple-Website\CodeIgniter\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#9 {main}
+CRITICAL - 2025-08-31 04:46:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: mahasiswa-sql]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Mahasiswa.php(15): CodeIgniter\Database\BaseConnection->query('SELECT * FROM mahasiswa')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
