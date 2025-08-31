@@ -1,24 +1,30 @@
 <?php
-// Cek koneksi
-    if ($conn->connect_error) {
-        die("Koneksi gagal: " . $conn->connect_error);
-    }
+// 1) Buat koneksi
+$conn = new mysqli('localhost', 'root', '', 'akademik_db');
+if ($conn->connect_errno) {
+    die('Koneksi gagal: ' . $conn->connect_error);
+}
 
-    // Ambil data dari form
-    $nim   = $conn->real_escape_string($_POST['nim']);
-    $nama  = $conn->real_escape_string($_POST['nama']);
-    $umur  = (int) $_POST['umur'];
+// 2) Ambil & validasi input (pastikan form method="post")
+$nim  = $_POST['nim']  ?? '';
+$nama = $_POST['nama'] ?? '';
+$umur = $_POST['umur'] ?? '';
 
-    // Simpan ke tabel mahasiswa
-    $sql = "INSERT INTO mahasiswa (nim, nama, umur) VALUES ('$nim', '$nama', $umur)";
+if ($nim === '' || $nama === '' || $umur === '' || !ctype_digit($umur)) {
+    die("<p style='color:red;'>Input tidak valid</p><a href='form_input_mahasiswa.html'>Kembali</a>");
+}
 
-    if ($conn->query($sql) === TRUE) {
-        echo "<p style='color:green;'>Data mahasiswa berhasil disimpan</p>";
-        echo "<a href='form_input_mahasiswa.html'>Input lagi</a>";
-    } else {
-        echo "<p style='color:red;'>Error: " . $conn->error . "</p>";
-        echo "<a href='form_input_mahasiswa.html'>Kembali</a>";
-    }
+// 3) Simpan ke DB
+$stmt = $conn->prepare("INSERT INTO mahasiswa (nim, nama, umur) VALUES (?, ?, ?)");
+$stmt->bind_param("ssi", $nim, $nama, $umur);
 
+if ($stmt->execute()) {
+    echo "<p style='color:green;'>Data mahasiswa berhasil disimpan</p>";
+    echo "<a href='form_input_mahasiswa.html'>Input lagi</a>";
+} else {
+    echo "<p style='color:red;'>Error: " . $stmt->error . "</p>";
+    echo "<a href='form_input_mahasiswa.html'>Kembali</a>";
+}
+
+$stmt->close();
 $conn->close();
-?>
