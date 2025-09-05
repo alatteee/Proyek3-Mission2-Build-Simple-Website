@@ -1,0 +1,25 @@
+CRITICAL - 2025-09-05 13:14:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "mahasiswa/detail.php"
+[Method: GET, Route: mahasiswa/detail/7]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('mahasiswa/detail.php')
+ 2 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('mahasiswa/detail', [], true)
+ 3 APPPATH\Controllers\Mahasiswa.php(28): view('mahasiswa/detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->detail('7')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-05 14:05:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layout/site.php"
+[Method: GET, Route: mahasiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/site.php')
+ 2 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layout/site', [], true)
+ 3 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('/mahasiswa/display_mahasiswa', [], true)
+ 4 APPPATH\Controllers\Mahasiswa.php(16): view('/mahasiswa/display_mahasiswa', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Mahasiswa->display()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mahasiswa))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
