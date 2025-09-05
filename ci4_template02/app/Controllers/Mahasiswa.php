@@ -15,6 +15,19 @@ class Mahasiswa extends BaseController
 
         return view('/mahasiswa/display_mahasiswa', $data);
     }
+
+    public function detail($id)
+    {
+        $model = new \App\Models\MahasiswaModel();
+        $data['mhs'] = $model->find($id);
+
+        if (!$data['mhs']) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Mahasiswa dengan ID $id tidak ditemukan");
+        }
+
+        return view('mahasiswa/detail_mahasiswa', $data);
+    }
+
 }
 
 
